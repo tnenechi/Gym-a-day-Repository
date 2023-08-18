@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Edu SA Beginner", cursive;
+  --login_border_radius: 3px;
+}
+
+body {
+  background-image: url("../../Images/background2.png");
+  background-attachment: fixed;
+  color: red;
+}
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.login-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-container input {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 2em;
+  border-radius: var(--login_border_radius);
+}
+
+label {
+  color: #fff;
+}
+
+.login-container button {
+  padding: 1em 3em;
+  background-color: black;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  border-radius: var(--login_border_radius);
+}
+
+.login-container button:hover {
+  background-color: red;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 2px solid red;
+}
+
+.links {
+  display: flex;
+  gap: 1em;
+}
+
+.divider {
+  height: 30px;
+  border-left: 2px solid;
+}
+
+@media screen and (min-width: 768px) {
+  .login-container input {
+    width: 30%;
+  }
+}
