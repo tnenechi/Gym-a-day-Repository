@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="13c4ac94-3186-4e12-a243-f58912aeb47f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:51839/Gym_a_Day_Backend.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Gym_a_Day_Backend.xsd" MetadataType="Schema" ID="8c1ec9f0-30e3-4746-ac5d-8d82b9efac6b" SourceId="1" SourceUrl="http://localhost:51839/Gym_a_Day_Backend.svc?xsd=xsd2" />
+    <MetadataFile FileName="Gym_a_Day_Backend.disco" MetadataType="Disco" ID="4fd1da7a-3d1e-4f46-86ce-f3dbef6267fa" SourceId="1" SourceUrl="http://localhost:51839/Gym_a_Day_Backend.svc?disco" />
+    <MetadataFile FileName="Gym_a_Day_Backend1.xsd" MetadataType="Schema" ID="aa3f585e-cecd-44f0-b9d0-211cc1303362" SourceId="1" SourceUrl="http://localhost:51839/Gym_a_Day_Backend.svc?xsd=xsd1" />
+    <MetadataFile FileName="Gym_a_Day_Backend2.xsd" MetadataType="Schema" ID="4ceeb344-f11a-4ba9-bb64-5467b159d24e" SourceId="1" SourceUrl="http://localhost:51839/Gym_a_Day_Backend.svc?xsd=xsd0" />
+    <MetadataFile FileName="Gym_a_Day_Backend.wsdl" MetadataType="Wsdl" ID="17c95847-24ea-408b-a858-44745b4824e7" SourceId="1" SourceUrl="http://localhost:51839/Gym_a_Day_Backend.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="Gym_a_Day_Solution.Service1" CodeBehind="Service1.svc.cs" %>
