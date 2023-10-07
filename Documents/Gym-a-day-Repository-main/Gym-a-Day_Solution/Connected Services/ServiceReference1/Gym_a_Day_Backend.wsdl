@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Gym_a_Day_Backend" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:51839/Gym_a_Day_Backend.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:51839/Gym_a_Day_Backend.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:51839/Gym_a_Day_Backend.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="I_Gym_a_Day_Backend_UserRegister_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserRegister" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_UserRegister_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_GetUserType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserType" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_GetUserType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_GetUserFirstname_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFirstname" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_GetUserFirstname_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFirstnameResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_AddProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddProduct" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_AddProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_EditProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditProduct" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_EditProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_DecreaseProductQty_InputMessage">
+    <wsdl:part name="parameters" element="tns:DecreaseProductQty" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_DecreaseProductQty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DecreaseProductQtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_GetProductQty_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductQty" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_GetProductQty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductQtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_DeleteProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteProduct" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_DeleteProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_GetProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProducts" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_GetProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_GetAProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAProduct" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_GetAProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAProductResponse" />
+  </wsdl:message>
+  <wsdl:portType name="I_Gym_a_Day_Backend">
+    <wsdl:operation name="UserRegister">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/UserRegister" message="tns:I_Gym_a_Day_Backend_UserRegister_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/UserRegisterResponse" message="tns:I_Gym_a_Day_Backend_UserRegister_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/Login" message="tns:I_Gym_a_Day_Backend_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/LoginResponse" message="tns:I_Gym_a_Day_Backend_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserType">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetUserType" message="tns:I_Gym_a_Day_Backend_GetUserType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetUserTypeResponse" message="tns:I_Gym_a_Day_Backend_GetUserType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFirstname">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetUserFirstname" message="tns:I_Gym_a_Day_Backend_GetUserFirstname_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetUserFirstnameResponse" message="tns:I_Gym_a_Day_Backend_GetUserFirstname_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/AddProduct" message="tns:I_Gym_a_Day_Backend_AddProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/AddProductResponse" message="tns:I_Gym_a_Day_Backend_AddProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/EditProduct" message="tns:I_Gym_a_Day_Backend_EditProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/EditProductResponse" message="tns:I_Gym_a_Day_Backend_EditProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DecreaseProductQty">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/DecreaseProductQty" message="tns:I_Gym_a_Day_Backend_DecreaseProductQty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/DecreaseProductQtyResponse" message="tns:I_Gym_a_Day_Backend_DecreaseProductQty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductQty">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductQty" message="tns:I_Gym_a_Day_Backend_GetProductQty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductQtyResponse" message="tns:I_Gym_a_Day_Backend_GetProductQty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/DeleteProduct" message="tns:I_Gym_a_Day_Backend_DeleteProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/DeleteProductResponse" message="tns:I_Gym_a_Day_Backend_DeleteProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProducts" message="tns:I_Gym_a_Day_Backend_GetProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductsResponse" message="tns:I_Gym_a_Day_Backend_GetProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetAProduct" message="tns:I_Gym_a_Day_Backend_GetAProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetAProductResponse" message="tns:I_Gym_a_Day_Backend_GetAProduct_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_I_Gym_a_Day_Backend" type="tns:I_Gym_a_Day_Backend">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UserRegister">
+      <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/UserRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserType">
+      <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/GetUserType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFirstname">
+      <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/GetUserFirstname" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProduct">
+      <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/AddProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditProduct">
+      <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/EditProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DecreaseProductQty">
+      <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/DecreaseProductQty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductQty">
+      <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProductQty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProduct">
+      <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/DeleteProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProducts">
+      <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAProduct">
+      <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/GetAProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Gym_a_Day_Backend">
+    <wsdl:port name="BasicHttpBinding_I_Gym_a_Day_Backend" binding="tns:BasicHttpBinding_I_Gym_a_Day_Backend">
+      <soap:address location="http://localhost:51839/Gym_a_Day_Backend.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

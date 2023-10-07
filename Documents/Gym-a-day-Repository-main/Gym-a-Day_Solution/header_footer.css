@@ -1,0 +1,160 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@500&family=Playfair+Display+SC:wght@400;700&display=swap");
+
+
+/*GENERAL STYLES*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Edu SA Beginner", cursive;
+    --nav_length: 80px;
+    --small_border_radius: 10px;
+}
+
+body {
+    background-image: url("./Images/background2.png");
+    background-attachment: fixed;
+    color: red;
+}
+
+/*HEADER STYLES*/
+
+
+
+header {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--nav_length);
+    padding: 0 2em;
+}
+
+.nav_right {
+    width: 60%;
+   
+}
+
+.nav_right_section {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.divider {
+    height: 30px;
+    border-left: 2px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.7em;
+    border-radius: var(--small_border_radius);
+}
+
+header a:hover {
+    background-color: red;
+}
+
+.icon {
+    margin: 0 0.05em;
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: #fff;
+}
+
+#big_screen_header {
+    display: none;
+}
+
+.customerNav, .adminNav{
+    display: inline;
+}
+
+/*FOOTER STYLES*/
+
+hr {
+    width: 50%;
+    margin: 1em 0;
+    border: 1px solid gray;
+}
+
+#big_footer {
+    display: none;
+}
+
+#small_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#small_footer #buttons button {
+    margin: 0.25em 0.5em;
+    padding: 0.5em;
+    background-color: #212121;
+    color: #fff;
+}
+
+#small_footer #buttons button:hover {
+    background-color: #6f6e6e;
+}
+
+/*BIG SCREEN STYLES*/
+@media screen and (min-width: 768px) {
+ 
+     #small_screen_header{
+         display: none;
+     }
+
+    #big_screen_header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #nav_right {
+        width: 50%;
+    }
+
+    #hero_section {
+        font-size: 2rem;
+    }
+
+    #small_footer {
+        display: none;
+    }
+
+    #big_footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #footer_table thead th {
+        text-align: left;
+    }
+
+    #footer_table thead th,
+    #footer_table tbody td {
+        padding: 0.25em 1em;
+    }
+
+    #footer_table td div {
+        background-color: #212121;
+        color: #fff;
+        text-align: center;
+        padding: 0.25em;
+    }
+
+    #footer_table td div:hover {
+        background-color: #6f6e6e;
+    }
+}

@@ -1,0 +1,56 @@
+/* SECTION AFTER HEADER STYLES */
+
+#hero_section {
+  height: calc(100vh - var(--nav_length));
+  font-size: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+
+  color: #fff;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("./Images/backgroung-img.jpg");
+  background-position: top;
+}
+
+#hero_section h1 span {
+  text-decoration: line-through;
+  text-decoration-color: red;
+}
+
+button {
+  margin: 2em;
+  font-size: 1.5rem;
+  padding: 1em 2em;
+  background-color: black;
+  color: white;
+  border-style: none;
+  border-radius: var(--small_border_radius);
+}
+
+button:hover {
+  background-color: red;
+}
+
+ /*WHY SECTION STYLES */
+#why-section {
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+
+  font-size: 1.25rem;
+}
+
+#why-section ol {
+  list-style-type: none;
+}
+#why-section ol li {
+  margin-top: 1em;
+}
+

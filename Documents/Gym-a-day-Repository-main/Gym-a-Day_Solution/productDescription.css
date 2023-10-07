@@ -1,0 +1,33 @@
+﻿#product_description_page {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    margin: 0 1.5em;
+}
+
+.productImg{
+    border: 1px solid #efefef;
+    height: 400px;
+    width: 400px;
+}
+
+#product_description_right {
+    margin-left: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px
+}
+
+.addToCartBtn {
+    margin: .5em;
+    background-color: #34113f;
+    font-size: 1rem;
+    padding: .5em;
+    color: white;
+}
+
+.addToCartBtn :hover {
+    background-color: #efefef;
+    color: black;
+}

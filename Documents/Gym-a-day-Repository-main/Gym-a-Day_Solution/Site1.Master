@@ -1,0 +1,157 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Gym_a_Day_Solution.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Gym-a-Day</title>
+     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="header_footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+     
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+<body>
+
+
+
+    <header id="big_screen_header">
+      <nav>
+        <div class="nav_left">
+          <h1>Gym-a-day</h1>
+    <asp:Literal ID="WelcomeMsg" runat="server"></asp:Literal>
+        </div>
+
+        <div class="nav_right">
+
+            <%--User Nav--%>
+            <section id="customerNav" class="nav_right_section" runat="server">
+                <a href="Home.aspx">Home</a>
+                <div class="divider"></div>
+                  <a href="Bookings.aspx">Bookings</a>
+                  <div class="divider"></div>
+                  <a href="Clubs.aspx">Clubs</a>
+                  <div class="divider"></div>
+                  <a href="Catalog.aspx">Shop</a>
+                  <div class="divider"></div>
+
+                  <%--Login/Logout Nav--%>
+                  <a runat="server" id="loginClient" href="Login.aspx">Sign in</a>
+                    <a runat="server" id="logoutClient" onserverclick="Logout_click">Sign out</a>
+            
+                    <a href="Cart.aspx"><i class="icon fa-solid fa-cart-shopping"></i></a>
+                  
+                  <i class="icon fa fa-search"></i>
+
+            </section>
+          
+
+
+            <%--Admin Nav--%>
+             <section id="adminNav" class="nav_right_section" runat="server">
+                <a href="Home.aspx">Home</a>
+                <div class="divider"></div>
+                  <a href="#">Show Bookings</a>
+                  <div class="divider"></div>
+                  <a href="ProductAddition.aspx">Products</a>
+                  <div class="divider"></div>
+
+                   <%--Login/Logout Nav--%>
+                  <a runat="server" id="loginAdmin" href="Login.aspx">Sign in</a>
+                    <a runat="server" id="logoutAdmin" onserverclick="Logout_click">Sign out</a>
+            
+                  <i class="icon fa-solid fa-cart-shopping"></i>
+                  <i class="icon fa fa-search"></i>
+
+            </section>
+
+          
+        </div>
+      </nav>
+    </header>
+
+
+   <form id="form1" runat="server" enctype="multipart/form-data">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+
+    <!-- Footer for screen sizes less than 768px -->
+    <div id="small_footer">
+      <hr />
+      <h2>Download Our App</h2>
+      <div id="buttons">
+        <button>
+          Download at the <br />
+          App Store
+        </button>
+        <button>
+          Get it on <br />
+          Google Play
+        </button>
+        <button>
+          Explore it on <br />
+          App Gallery
+        </button>
+      </div>
+      <hr />
+    </div>
+
+    <!-- Footer for screen sizes greater than 768px -->
+    <div id="big_footer">
+      <hr />
+      <table id="footer_table">
+        <thead>
+          <tr>
+            <th>Shop</th>
+            <th>Help</th>
+            <th>Account</th>
+            <th>Company</th>
+            <th>Download Our Apps</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Daily Deals</td>
+            <td>Help Centre</td>
+            <td>My Account</td>
+            <td>About Us</td>
+            <td>
+              <div class="footer_btn">Get it on <br />Google Play</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Daily Deals</td>
+            <td>Help Centre</td>
+            <td>My Account</td>
+            <td>About Us</td>
+            <td>
+              <div class="footer_btn">Explore it on <br />App Gallery</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Daily Deals</td>
+            <td>Help Centre</td>
+            <td>My Account</td>
+            <td>About Us</td>
+            <td>
+              <div class="footer_btn">Download on the <br />App Store</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <hr />
+    </div>
+</body>
+</html>
