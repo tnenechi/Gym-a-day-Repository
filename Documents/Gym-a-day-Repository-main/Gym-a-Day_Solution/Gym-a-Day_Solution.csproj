@@ -77,6 +77,7 @@
     <Content Include="cart.css" />
     <Content Include="Catalog.aspx" />
     <Content Include="catalog.css" />
+    <Content Include="Checkout.aspx" />
     <None Include="Connected Services\ServiceReference1\Gym_a_Day_Backend.disco" />
     <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
     <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
@@ -96,6 +97,8 @@
     <Content Include="Images\shopping-cart.png" />
     <Content Include="Login.aspx" />
     <Content Include="login.css" />
+    <Content Include="main.html" />
+    <Content Include="mainstylesheet.css" />
     <Content Include="ProductAddition.aspx" />
     <Content Include="productAdditon.css" />
     <Content Include="ProductDescription.aspx" />
@@ -124,6 +127,13 @@
     </Compile>
     <Compile Include="Catalog.aspx.designer.cs">
       <DependentUpon>Catalog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\ServiceReference1\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -214,6 +224,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServiceReference1\Gym_a_Day_Backend2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference1\Gym_a_Day_Backend3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />

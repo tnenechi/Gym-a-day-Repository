@@ -42,10 +42,7 @@ namespace Gym_a_Day_Solution
 
         }
 
-        protected void CartItemSubtotal(object sender)
-        {
-
-        }
+      
 
 
        protected int GetDBProductQTY(object idObject)
@@ -166,7 +163,38 @@ namespace Gym_a_Day_Solution
 
         protected void CheckoutButton_Click(object sender, EventArgs e)
         {
+            if(Session["UserType"] != null)
+            {
+                Dictionary<int, int> prodIdQty = new Dictionary<int, int>();
+                int userId = (int)Session["UserID"];
+                DateTime datePurchased = DateTime.Now;
+                decimal totalSpent = getGrandTotal();
 
+                foreach (RepeaterItem item in Cart_Repeater.Items)
+                {
+
+                    HiddenField prodID = (HiddenField)item.FindControl("ProdID_HiddenField");
+                    int idOfProd = Convert.ToInt32((prodID.Value));
+
+                    TextBox qtyTextBox = (TextBox)item.FindControl("Cart_Item_Qty");
+                    int qtyBought = Convert.ToInt32(qtyTextBox.Text);
+
+
+
+                    prodIdQty.Add(idOfProd, qtyBought);
+
+                }
+
+                //create Invoice
+                Client.CreateInvoice(userId, prodIdQty, totalSpent, datePurchased);
+
+                //redirect to checkout Page
+                Response.Redirect("Checkout.aspx?cp=1");
+            }
+            else
+            {
+                Response.Redirect("Login.aspx?cout=0");
+            }
         }
 
     }

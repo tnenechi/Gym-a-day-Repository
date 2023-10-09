@@ -5,6 +5,7 @@
       <xsd:import schemaLocation="http://localhost:51839/Gym_a_Day_Backend.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:51839/Gym_a_Day_Backend.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:51839/Gym_a_Day_Backend.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+      <xsd:import schemaLocation="http://localhost:51839/Gym_a_Day_Backend.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="I_Gym_a_Day_Backend_UserRegister_InputMessage">
@@ -73,6 +74,18 @@
   <wsdl:message name="I_Gym_a_Day_Backend_GetAProduct_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAProductResponse" />
   </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_CreateInvoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateInvoice" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_CreateInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_GetInvoices_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvoices" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_GetInvoices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvoicesResponse" />
+  </wsdl:message>
   <wsdl:portType name="I_Gym_a_Day_Backend">
     <wsdl:operation name="UserRegister">
       <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/UserRegister" message="tns:I_Gym_a_Day_Backend_UserRegister_InputMessage" />
@@ -117,6 +130,14 @@
     <wsdl:operation name="GetAProduct">
       <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetAProduct" message="tns:I_Gym_a_Day_Backend_GetAProduct_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetAProductResponse" message="tns:I_Gym_a_Day_Backend_GetAProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateInvoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/CreateInvoice" message="tns:I_Gym_a_Day_Backend_CreateInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/CreateInvoiceResponse" message="tns:I_Gym_a_Day_Backend_CreateInvoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoices">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetInvoices" message="tns:I_Gym_a_Day_Backend_GetInvoices_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetInvoicesResponse" message="tns:I_Gym_a_Day_Backend_GetInvoices_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_I_Gym_a_Day_Backend" type="tns:I_Gym_a_Day_Backend">
@@ -213,6 +234,24 @@
     </wsdl:operation>
     <wsdl:operation name="GetAProduct">
       <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/GetAProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateInvoice">
+      <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/CreateInvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoices">
+      <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/GetInvoices" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

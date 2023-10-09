@@ -2,10 +2,26 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         .Empty_Cart_Container{
+            height: 500px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
+        #BackToShop {
+            padding: 10px 20px;
+            background-color: #111111;
+            color: #fff;
+            border: 1px solid #fca311;
+            border-radius: 3px;
+
+        }
+
+        #BackToShop {
+            cursor: pointer;
+            background-color: #fca311;
+            transition: background-color linear 0.3s;
+}
+
     </style>
 
 </asp:Content>

@@ -26,9 +26,20 @@ namespace Gym_a_Day_Solution
             //if the userType is not null
             if (idOfUser != 0)
             {
+                Session["UserID"] = idOfUser;
                 Session["UserType"] = client.GetUserType(idOfUser);
                 Session["UserName"] = client.GetUserFirstname(idOfUser);
-                Response.Redirect("Home.aspx");
+
+                if(Request.QueryString["cout"] != null)
+                {
+                    Response.Redirect("Checkout.aspx?cp=1");
+                }
+                else
+                {
+                    Response.Redirect("Home.aspx");
+                }
+
+                
             }
             else
             {

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym A Day</title>
+   <link rel="stylesheet"  href="mainstylesheet.css"/>  
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+</head>
+<body>
+<header id="big_screen_header">
+    <!-- -MASTER PAGE HEADER- -->
+
+    <nav>
+        <div class="nav_left">
+          <h1 class="title"><a href="Home.aspx">Gym-a-day</a></h1>
+        </div>
+
+        <div class="nav_right">
+
+            <!--User Nav-->
+            <section id="customerNav" class="nav_right_section" runat="server" hidden>
+                <a href="Home.aspx">Home</a>
+                <div class="divider"></div>
+                  <a href="Bookings.aspx">Bookings</a>
+                  <div class="divider"></div>
+                  <a href="Clubs.aspx">Clubs</a>
+                  <div class="divider"></div>
+                  <a href="Catalog.aspx">Shop</a>
+                  <div class="divider"></div>
+                  
+
+                  <!--Login/Logout Nav-->
+                  <a runat="server" id="loginClient" href="Login.aspx">Sign in</a>
+                    <a runat="server" id="logoutClient" onserverclick="Logout_click">Sign out</a>
+            
+                    <a href="Cart.aspx"><i class="icon fa-solid fa-cart-shopping"></i></a>
+                  
+                  <i class="icon fa fa-search"></i>
+
+            </section>
+          
+
+
+            <!--Admin Nav-->
+             <section id="adminNav" class="nav_right_section" runat="server" hidden>
+                <a href="Home.aspx">Home</a>
+                <div class="divider"></div>
+                  <a href="#">Show Bookings</a>
+                  <div class="divider"></div>
+                  <a href="ProductAddition.aspx">Products</a>
+                  <div class="divider"></div>
+
+                   <!--Login/Logout Nav-->
+                  <a runat="server" id="loginAdmin" href="Login.aspx">Sign in</a>
+                    <a runat="server" id="logoutAdmin" onserverclick="Logout_click">Sign out</a>
+            
+                  <i class="icon fa-solid fa-cart-shopping"></i>
+                  <i class="icon fa fa-search"></i>
+
+            </section>
+
+          
+        </div>
+      </nav>
+
+    <!-- -MASTER PAGE HEADER END- -->
+
+
+</header>
+
+    <!-- Content Section -->
+    
+    <div class="cart-page">
+        <table class="cart-table">
+           
+          <tr id="cart-page-headings">
+            <th class="cart-head">Product</th>
+            <th class="cart-head">Quantity</th>
+            <th class="cart-head">Subtotal</th>
+          </tr>
+
+          <tr id="cart-page-product">
+            <td class="cart-table-data">
+                <div class="cart-info">
+                    <img ID="Cart_Prod_Img"   ImageUrl='<%# Eval("Image") %>'  runat="server" CssClass="cart-table-img" />
+                    <div>
+                        <label ID="Cart_Prod_Name" runat="server" Text='<%# Eval("Name") %>' class="cart-product-name" >Name of product</label>
+                        <br />
+                        <p>Price:</p>
+                        <br />
+                            
+                        <button ID="RemoveItem" class="cart-remove" runat="server" OnClick="RemoveItem_Click" CommandArgument='<%# Eval("ID") %>'>Remove</button>
+                    </div>
+                </div>
+            </td>
+
+            <td class="cart-table-data">
+               
+                <input 
+                    type="number" 
+                    class="cart-table-quantity" 
+                    ID="Cart_Item_Qty" 
+                    runat="server" 
+                    value='<%# getQuantity(Eval("ID")) %>' 
+                    min="1"
+            />
+                
+            </td>
+
+                
+            <td class="cart-table-data">"Total"</td>
+        </tr>
+        </table>
+
+        <div class="total-price">
+            <table class="total-price-table">
+              <tr>
+                <td class="cart-table-data">Subtotal</td>
+                <td class="cart-table-data">R2000</td>
+              </tr>
+              <tr>
+                <td class="cart-table-data">Tax</td>
+                <td class="cart-table-data">R2000</td>
+              </tr>
+              <tr>
+                <td class="cart-table-data">Total</td>
+                <td class="cart-table-data"><%= customerCart.GrandTotal()%></td>
+              </tr>
+            </table> 
+        </div>
+    
+        <div class="checkout">
+            <button class="checkout-btn">Checkout</button>
+        </div>
+
+    
+    </div>
+
+    <!-- Content Section END -->
+
+    <!-- Footer Section START -->
+   
+
+            <!-- Footer for screen sizes greater than 768px -->
+    <div id="big_footer">
+        <hr />
+        <table id="footer_table">
+          <thead>
+            <tr>
+              <th>Contact Us</th>
+              <th>Account</th>
+              <th>Company</th>
+              <th>Follow Us</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td id="contact">+27 11 432 4953</td>
+              <td><a id="contact">My Account</a></td>
+              <td id="contact">About Us</td>
+              <td id="about-us">
+                <a href="#"  class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-whatsapp"></a>
+                <a href="#" class="fa fa-youtube"></a>
+               
+              </td>
+            </tr>
+            
+          </tbody>
+        </table>
+        <hr />
+      </div>
+
+ 
+</body>
+</html>

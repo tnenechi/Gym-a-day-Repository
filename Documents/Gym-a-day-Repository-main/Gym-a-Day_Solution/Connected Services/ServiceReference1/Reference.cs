@@ -223,6 +223,22 @@ namespace Gym_a_Day_Solution.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetAProduct", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetAProductResponse")]
         System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Product> GetAProductAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/CreateInvoice", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/CreateInvoiceResponse")]
+        bool CreateInvoice(int userId, System.Collections.Generic.Dictionary<int, int> prodIdQty, decimal totalAmountSpent, System.DateTime purchaseDate);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/CreateInvoice", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/CreateInvoiceResponse")]
+        System.Threading.Tasks.Task<bool> CreateInvoiceAsync(int userId, System.Collections.Generic.Dictionary<int, int> prodIdQty, decimal totalAmountSpent, System.DateTime purchaseDate);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetInvoices", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetInvoicesResponse")]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Gym_a_Day_Solution.ServiceReference1.Product[]))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Gym_a_Day_Solution.ServiceReference1.Product))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.Dictionary<int, int>))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
+        object[] GetInvoices(int userId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetInvoices", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetInvoicesResponse")]
+        System.Threading.Tasks.Task<object[]> GetInvoicesAsync(int userId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -338,6 +354,22 @@ namespace Gym_a_Day_Solution.ServiceReference1 {
         
         public System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Product> GetAProductAsync(int id) {
             return base.Channel.GetAProductAsync(id);
+        }
+        
+        public bool CreateInvoice(int userId, System.Collections.Generic.Dictionary<int, int> prodIdQty, decimal totalAmountSpent, System.DateTime purchaseDate) {
+            return base.Channel.CreateInvoice(userId, prodIdQty, totalAmountSpent, purchaseDate);
+        }
+        
+        public System.Threading.Tasks.Task<bool> CreateInvoiceAsync(int userId, System.Collections.Generic.Dictionary<int, int> prodIdQty, decimal totalAmountSpent, System.DateTime purchaseDate) {
+            return base.Channel.CreateInvoiceAsync(userId, prodIdQty, totalAmountSpent, purchaseDate);
+        }
+        
+        public object[] GetInvoices(int userId) {
+            return base.Channel.GetInvoices(userId);
+        }
+        
+        public System.Threading.Tasks.Task<object[]> GetInvoicesAsync(int userId) {
+            return base.Channel.GetInvoicesAsync(userId);
         }
     }
 }
