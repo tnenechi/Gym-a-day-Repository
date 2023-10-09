@@ -8,10 +8,15 @@ using System.Web.UI.WebControls;
 
 namespace Gym_a_Day_Solution
 {
+
+
     public partial class WebForm5 : System.Web.UI.Page
     {
         I_Gym_a_Day_BackendClient Client = new I_Gym_a_Day_BackendClient();
-        public Cart customerCart;
+        public static Cart customerCart;
+        
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
             

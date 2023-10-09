@@ -64,9 +64,7 @@
         cursor: pointer;
     }
 
-        .icon:hover {
-            color: #fca311;
-        }
+
 
     .customerNav, .adminNav{
         display: inline;
@@ -77,7 +75,7 @@
         color: black;
     }
 
-    header a, a, #contact{
+    header a, #big_footer a, #contact{
         color: white;
         text-decoration: none;
         padding: 0.7em;
@@ -205,8 +203,6 @@
                 <div class="divider"></div>
                   <a href="Bookings.aspx">Bookings</a>
                   <div class="divider"></div>
-                  <a href="Clubs.aspx">Clubs</a>
-                  <div class="divider"></div>
                   <a href="Catalog.aspx">Shop</a>
                   <div class="divider"></div>
 
@@ -214,10 +210,12 @@
                   <a runat="server" id="loginClient" href="Login.aspx">Sign in</a>
                     <a runat="server" id="logoutClient" onserverclick="Logout_click">Sign out</a>
             
-                    <a href="Cart.aspx"><i class="icon fa-solid fa-cart-shopping"></i></a>
+                    <a href="Cart.aspx">
+                        <i class="icon fa-solid fa-cart-shopping"></i>
+                        <asp:Literal ID="CartCount" runat="server"></asp:Literal>
+                    </a>
                   
-                  <i class="icon fa fa-search"></i>
-
+       
             </section>
           
 

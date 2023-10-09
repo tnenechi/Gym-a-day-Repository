@@ -36,7 +36,7 @@ namespace Gym_a_Day_Solution
 
                 //TEMPLATE FOR PRODUCT DESCRIPTIONS
                 productDetails += "<h2>" + aProduct.Prod_Name + "</h2>";
-                productDetails += "<h1>" + aProduct.Prod_Price + "</h1>";
+                productDetails += "<h1>R" + aProduct.Prod_Price + "</h1>";
                 productDetails += "<hr>";
                 productDetails += "<p>" + aProduct.Prod_Description + "</p>";
                 productDetails += "<hr>";
@@ -58,6 +58,9 @@ namespace Gym_a_Day_Solution
 
         protected void AddToCartBtn_Click(object sender, EventArgs e)
         {
+       
+            
+
             //Get the selected product
             var product = Client.GetAProduct(Convert.ToInt32(idOfSelectedProd));
 
@@ -81,7 +84,6 @@ namespace Gym_a_Day_Solution
             //Insert the CartItem into the customer's cart
             myCart.Insert(cartItem);
             lt_Added.Text = "Item successfully added!";
-
 
 
         }

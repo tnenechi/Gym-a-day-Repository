@@ -11,6 +11,19 @@ namespace Gym_a_Day_Solution
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            int numOfCartItems = 0;
+
+            if(WebForm5.customerCart != null)
+            {
+                //numOfCartItems = WebForm5.customerCart.Items.Count();
+
+                foreach(CartItem anItem in WebForm5.customerCart.Items)
+                {
+                    numOfCartItems += anItem.Quantity;
+                }
+            }
+
+            CartCount.Text = string.Format(numOfCartItems.ToString());
 
             //DEFAULT: show a customerNav and Login option
             logoutClient.Visible = false;

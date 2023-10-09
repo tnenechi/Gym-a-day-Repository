@@ -88,7 +88,7 @@
 
 
     
-    .checkout-btn {
+    .checkout-btn, .Update-Btn {
         padding: 10px 20px;
         background-color: #111111;
         color: #fff;
@@ -175,7 +175,7 @@
       </table>
 
        <div class="update-cart">
-            <asp:Button ID="Update_Btn" runat="server" Text="Update Cart" OnClick="Update_Btn_Click" CommandArgument='<%# Eval("ID") %>'/>
+            <asp:Button ID="Update_Btn" CssClass="Update-Btn" runat="server" Text="Update Cart" OnClick="Update_Btn_Click" CommandArgument='<%# Eval("ID") %>'/>
       </div>
 
       <div class="total-price">
