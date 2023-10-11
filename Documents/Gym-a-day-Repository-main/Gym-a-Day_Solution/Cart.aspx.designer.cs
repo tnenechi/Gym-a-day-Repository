@@ -15,6 +15,15 @@ namespace Gym_a_Day_Solution
     {
 
         /// <summary>
+        /// Msg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal Msg;
+
+        /// <summary>
         /// Cart_Container control.
         /// </summary>
         /// <remarks>

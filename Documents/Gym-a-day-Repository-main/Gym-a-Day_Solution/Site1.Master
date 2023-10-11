@@ -226,7 +226,9 @@
                 <div class="divider"></div>
                   <a href="#">Show Bookings</a>
                   <div class="divider"></div>
-                  <a href="ProductAddition.aspx">Products</a>
+                  <a href="ProductAddition.aspx">Add Products</a>
+                  <div class="divider"></div>
+                 <a href="Catalog.aspx">Manage Products</a>
                   <div class="divider"></div>
 
                    <%--Login/Logout Nav--%>

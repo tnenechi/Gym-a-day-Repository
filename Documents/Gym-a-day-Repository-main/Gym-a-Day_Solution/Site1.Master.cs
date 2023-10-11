@@ -13,11 +13,11 @@ namespace Gym_a_Day_Solution
         {
             int numOfCartItems = 0;
 
-            if(WebForm5.customerCart != null)
+            if(Session["CustCart"] != null)
             {
                 //numOfCartItems = WebForm5.customerCart.Items.Count();
 
-                foreach(CartItem anItem in WebForm5.customerCart.Items)
+                foreach(CartItem anItem in ((Cart)Session["CustCart"]).Items)
                 {
                     numOfCartItems += anItem.Quantity;
                 }

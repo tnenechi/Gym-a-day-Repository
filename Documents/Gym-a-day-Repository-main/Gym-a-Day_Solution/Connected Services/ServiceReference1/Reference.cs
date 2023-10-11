@@ -26,6 +26,9 @@ namespace Gym_a_Day_Solution.ServiceReference1 {
         private int ActiveField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Prod_CategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string Prod_DescriptionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -62,6 +65,19 @@ namespace Gym_a_Day_Solution.ServiceReference1 {
                 if ((this.ActiveField.Equals(value) != true)) {
                     this.ActiveField = value;
                     this.RaisePropertyChanged("Active");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Prod_Category {
+            get {
+                return this.Prod_CategoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Prod_CategoryField, value) != true)) {
+                    this.Prod_CategoryField = value;
+                    this.RaisePropertyChanged("Prod_Category");
                 }
             }
         }
@@ -183,16 +199,16 @@ namespace Gym_a_Day_Solution.ServiceReference1 {
         System.Threading.Tasks.Task<string> GetUserFirstnameAsync(int ID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/AddProduct", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/AddProductResponse")]
-        bool AddProduct(string imgPath, string prodName, string prodPrice, string prodDescription, int quantity);
+        bool AddProduct(string imgPath, string prodName, string prodPrice, string prodDescription, int quantity, string category);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/AddProduct", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/AddProductResponse")]
-        System.Threading.Tasks.Task<bool> AddProductAsync(string imgPath, string prodName, string prodPrice, string prodDescription, int quantity);
+        System.Threading.Tasks.Task<bool> AddProductAsync(string imgPath, string prodName, string prodPrice, string prodDescription, int quantity, string category);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/EditProduct", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/EditProductResponse")]
-        int EditProduct(int ID, string prodName, string prodPrice, string prodDescription, int quantity);
+        int EditProduct(int ID, string prodName, string prodPrice, string prodDescription, int quantity, string category);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/EditProduct", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/EditProductResponse")]
-        System.Threading.Tasks.Task<int> EditProductAsync(int ID, string prodName, string prodPrice, string prodDescription, int quantity);
+        System.Threading.Tasks.Task<int> EditProductAsync(int ID, string prodName, string prodPrice, string prodDescription, int quantity, string category);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/DecreaseProductQty", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/DecreaseProductQtyResponse")]
         bool DecreaseProductQty(int ID, int quantityBought);
@@ -239,6 +255,36 @@ namespace Gym_a_Day_Solution.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetInvoices", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetInvoicesResponse")]
         System.Threading.Tasks.Task<object[]> GetInvoicesAsync(int userId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductsByCategory", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProductsByCategoryResponse")]
+        Gym_a_Day_Solution.ServiceReference1.Product[] GetProductsByCategory(string productCategory);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductsByCategory", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProductsByCategoryResponse")]
+        System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Product[]> GetProductsByCategoryAsync(string productCategory);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByPriceAsc", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByPriceAscResponse")]
+        Gym_a_Day_Solution.ServiceReference1.Product[] GetProductByPriceAsc();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByPriceAsc", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByPriceAscResponse")]
+        System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Product[]> GetProductByPriceAscAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByPriceDsc", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByPriceDscResponse")]
+        Gym_a_Day_Solution.ServiceReference1.Product[] GetProductByPriceDsc();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByPriceDsc", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByPriceDscResponse")]
+        System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Product[]> GetProductByPriceDscAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByNameAsc", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByNameAscResponse")]
+        Gym_a_Day_Solution.ServiceReference1.Product[] GetProductByNameAsc();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByNameAsc", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByNameAscResponse")]
+        System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Product[]> GetProductByNameAscAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByNameDsc", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByNameDscResponse")]
+        Gym_a_Day_Solution.ServiceReference1.Product[] GetProductByNameDsc();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByNameDsc", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByNameDscResponse")]
+        System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Product[]> GetProductByNameDscAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -300,20 +346,20 @@ namespace Gym_a_Day_Solution.ServiceReference1 {
             return base.Channel.GetUserFirstnameAsync(ID);
         }
         
-        public bool AddProduct(string imgPath, string prodName, string prodPrice, string prodDescription, int quantity) {
-            return base.Channel.AddProduct(imgPath, prodName, prodPrice, prodDescription, quantity);
+        public bool AddProduct(string imgPath, string prodName, string prodPrice, string prodDescription, int quantity, string category) {
+            return base.Channel.AddProduct(imgPath, prodName, prodPrice, prodDescription, quantity, category);
         }
         
-        public System.Threading.Tasks.Task<bool> AddProductAsync(string imgPath, string prodName, string prodPrice, string prodDescription, int quantity) {
-            return base.Channel.AddProductAsync(imgPath, prodName, prodPrice, prodDescription, quantity);
+        public System.Threading.Tasks.Task<bool> AddProductAsync(string imgPath, string prodName, string prodPrice, string prodDescription, int quantity, string category) {
+            return base.Channel.AddProductAsync(imgPath, prodName, prodPrice, prodDescription, quantity, category);
         }
         
-        public int EditProduct(int ID, string prodName, string prodPrice, string prodDescription, int quantity) {
-            return base.Channel.EditProduct(ID, prodName, prodPrice, prodDescription, quantity);
+        public int EditProduct(int ID, string prodName, string prodPrice, string prodDescription, int quantity, string category) {
+            return base.Channel.EditProduct(ID, prodName, prodPrice, prodDescription, quantity, category);
         }
         
-        public System.Threading.Tasks.Task<int> EditProductAsync(int ID, string prodName, string prodPrice, string prodDescription, int quantity) {
-            return base.Channel.EditProductAsync(ID, prodName, prodPrice, prodDescription, quantity);
+        public System.Threading.Tasks.Task<int> EditProductAsync(int ID, string prodName, string prodPrice, string prodDescription, int quantity, string category) {
+            return base.Channel.EditProductAsync(ID, prodName, prodPrice, prodDescription, quantity, category);
         }
         
         public bool DecreaseProductQty(int ID, int quantityBought) {
@@ -370,6 +416,46 @@ namespace Gym_a_Day_Solution.ServiceReference1 {
         
         public System.Threading.Tasks.Task<object[]> GetInvoicesAsync(int userId) {
             return base.Channel.GetInvoicesAsync(userId);
+        }
+        
+        public Gym_a_Day_Solution.ServiceReference1.Product[] GetProductsByCategory(string productCategory) {
+            return base.Channel.GetProductsByCategory(productCategory);
+        }
+        
+        public System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Product[]> GetProductsByCategoryAsync(string productCategory) {
+            return base.Channel.GetProductsByCategoryAsync(productCategory);
+        }
+        
+        public Gym_a_Day_Solution.ServiceReference1.Product[] GetProductByPriceAsc() {
+            return base.Channel.GetProductByPriceAsc();
+        }
+        
+        public System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Product[]> GetProductByPriceAscAsync() {
+            return base.Channel.GetProductByPriceAscAsync();
+        }
+        
+        public Gym_a_Day_Solution.ServiceReference1.Product[] GetProductByPriceDsc() {
+            return base.Channel.GetProductByPriceDsc();
+        }
+        
+        public System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Product[]> GetProductByPriceDscAsync() {
+            return base.Channel.GetProductByPriceDscAsync();
+        }
+        
+        public Gym_a_Day_Solution.ServiceReference1.Product[] GetProductByNameAsc() {
+            return base.Channel.GetProductByNameAsc();
+        }
+        
+        public System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Product[]> GetProductByNameAscAsync() {
+            return base.Channel.GetProductByNameAscAsync();
+        }
+        
+        public Gym_a_Day_Solution.ServiceReference1.Product[] GetProductByNameDsc() {
+            return base.Channel.GetProductByNameDsc();
+        }
+        
+        public System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Product[]> GetProductByNameDscAsync() {
+            return base.Channel.GetProductByNameDscAsync();
         }
     }
 }

@@ -2,62 +2,100 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
    <%-- <link rel="stylesheet" type="text/css" href="catalog.css"/>--%>
 
-    <style>
+<style>
 
         
-.product-catalog{
-    display: flex;
-    flex-wrap: wrap;
-    
-}
-
-.product_card {
-    width: 200px;
-    height: 300px;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 1em;
-    border-radius: 5px;
-    border: 2px solid white;
-}
-
-    .product_card img {
-        width: 150px;
-        height: 200px;
-        object-fit: contain;
-    }
-
-    .product_card p {
-        margin-bottom: 1em;
-    }
-
-    .product_card:hover {
-        /*box-shadow: 10px 10px 5px #cfcbcb;*/
-        border: 2px solid #fca311;
+    .product-catalog{
+        width: 100%;
+        display: flex;
+        margin-left: 50px;
+        margin-top: 10px;
+        justify-content: space-between;
 
     }
 
-    a{
-        color: black;
-        text-decoration: none;
+    .ProductFilter{
+        width: 500px;
+    }
+
+    .Product-Page_Right{
+        display: flex;
+        flex-direction: column;
+        margin-left: 50px;
+    }
+
+    .Product-Page_Right_Products{
+        display: flex;
+        flex-wrap: wrap;
     }
 
 
-  
+    .product_card {
+        width: 200px;
+        height: 300px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1em;
+        border-radius: 5px;
+        border: 2px solid white;
+    }
+
+        .product_card img {
+            width: 150px;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        .product_card p {
+            margin-bottom: 1em;
+        }
+
+        .product_card:hover {
+            /*box-shadow: 10px 10px 5px #cfcbcb;*/
+            border: 2px solid #fca311;
+
+        }
+
+        a{
+            color: black;
+            text-decoration: none;
+        }
 
 
-
-
-
-
-    </style>
+</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="product-catalog">
-        <asp:Repeater ID="Repeater1" runat="server">
+        <div class="ProductFilter">
+            <asp:CheckBox ID="Supplements" runat="server" Text="Supplements" OnCheckedChanged="Supplements_CheckedChanged" AutoPostBack="true"/>
+            <br />
+              <asp:CheckBox ID="Clothing" runat="server" Text="Clothing" OnCheckedChanged="Clothing_CheckedChanged" AutoPostBack="true"/>
+            <br />
+                <asp:CheckBox ID="Gadgets" runat="server" Text="Gadgets" OnCheckedChanged="Gadgets_CheckedChanged" AutoPostBack="true"/>
+            <br />
+        </div>
+
+
+        <div class="Product-Page_Right">
+
+            <div id="Product-Page_Right_Sort">
+                <h1>SORT BY:</h1>
+                <asp:DropDownList ID="SortDropDownList" runat="server" OnSelectedIndexChanged="SortDropDownList_SelectedIndexChanged" AutoPostBack="true">
+
+                    <asp:ListItem Value="PrAsc">Price: Ascending</asp:ListItem>
+                    <asp:ListItem Value="PrDsc">Price: Descending</asp:ListItem>
+                    <asp:ListItem Value="NameAsc">Name: Ascending</asp:ListItem>
+                    <asp:ListItem Value="NameDsc">Name: Descending</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+
+
+            <div class="Product-Page_Right_Products">
+
+                <asp:Repeater ID="Repeater1" runat="server">
             
             <ItemTemplate>
                 
@@ -70,5 +108,9 @@
 
             </ItemTemplate>
         </asp:Repeater>
+            </div>
+            
+        </div>
+        
     </div>
 </asp:Content>

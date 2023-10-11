@@ -20,5 +20,10 @@ namespace Gym_a_Day_Solution
                 Response.Redirect("Cart.aspx");
             }
         }
+
+        protected void InvoiceBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Invoice.aspx");
+        }
     }
 }

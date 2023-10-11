@@ -34,7 +34,7 @@ namespace Gym_a_Day_Solution
             string imgPath = "/Images/" + imgName;
 
             //Add the product to the db
-            bool hasBeenAdded = client.AddProduct(imgPath, productName.Value, productPrice.Value, productDescription.Value, Convert.ToInt32(productQty.Value));
+            bool hasBeenAdded = client.AddProduct(imgPath, productName.Value, productPrice.Value, productDescription.Value, Convert.ToInt32(productQty.Value), SelectCategoryDropDownList.SelectedValue);
 
             if (hasBeenAdded == true)
             {

@@ -78,7 +78,17 @@
 
     </div>
        <asp:Button type='submit' class='addToCartBtn' id='AddToCartBtn' runat='server' OnClick='AddToCartBtn_Click' Text='Add to cart'/>
-       <asp:Literal runat="server" ID="lt_Added"></asp:Literal>
+      
+
+
+       <asp:Button type='submit' class='addToCartBtn' id='UpdateProdBtn' runat='server' OnClick="UpdateProdBtn_Click" Text='Update Product'/>
+   
+
+
+      <asp:Literal runat="server" ID="lt_Added"></asp:Literal>
+
    </div>
+
+
 
 </asp:Content>

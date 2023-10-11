@@ -23,6 +23,12 @@ namespace Gym_a_Day_Solution
 
             if (Request.QueryString["ProdId"] != null)
             {
+
+                //Default: Hide the update product btn
+                UpdateProdBtn.Visible = false;
+
+
+
                 idOfSelectedProd = Convert.ToInt32(Request.QueryString["ProdId"]);
 
                 //Get the product using the prodID
@@ -40,9 +46,22 @@ namespace Gym_a_Day_Solution
                 productDetails += "<hr>";
                 productDetails += "<p>" + aProduct.Prod_Description + "</p>";
                 productDetails += "<hr>";
-                //productDetails += "<button type='submit' class='addToCartBtn' id='AddToCartBtn' runat='server' onserverClick='AddToCartBtn_Click'> Add to cart <button/>";
+                
 
                 product_description_right.InnerHtml = productDetails;
+
+
+
+                //Show only the update product btn for admin
+                if(Session["UserType"] != null)
+                {
+                    if (((string)Session["UserType"]).Equals("Admin"))
+                    {
+                        AddToCartBtn.Visible = false;
+                        UpdateProdBtn.Visible = true;
+                       
+                    }
+                }
             }
             else
             {
@@ -88,7 +107,12 @@ namespace Gym_a_Day_Solution
 
         }
 
+        
 
+        protected void UpdateProdBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ManageProduct.aspx?id=" + idOfSelectedProd);
+        }
     }
 
 

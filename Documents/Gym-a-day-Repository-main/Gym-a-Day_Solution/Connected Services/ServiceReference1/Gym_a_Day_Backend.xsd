@@ -9,6 +9,7 @@
   <xs:complexType name="Product">
     <xs:sequence>
       <xs:element minOccurs="0" name="Active" type="xs:int" />
+      <xs:element minOccurs="0" name="Prod_Category" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Prod_Description" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Prod_Id" type="xs:int" />
       <xs:element minOccurs="0" name="Prod_Img_Path" nillable="true" type="xs:string" />

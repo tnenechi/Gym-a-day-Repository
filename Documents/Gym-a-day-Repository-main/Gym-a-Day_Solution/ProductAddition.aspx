@@ -56,6 +56,16 @@
                 placeholder="Quantity of the product" 
                 class="input"/>
 
+
+
+             <label for="SelectCategoryDropDownList">Product Category</label>
+            <asp:DropDownList ID="SelectCategoryDropDownList" runat="server">
+                <asp:ListItem Value="Supplements">Supplements</asp:ListItem>
+                <asp:ListItem Value="Clothing">Clothing</asp:ListItem>
+                <asp:ListItem Value="Gadgets">Gadgets</asp:ListItem>
+            </asp:DropDownList>
+
+
             <asp:Button ID="Submit" runat="server" Text="Add Product" CssClass="add-product-btn" OnClick="Submit_Click" />
         </div>
 

@@ -118,8 +118,8 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
 
+    <asp:Literal ID="Msg" runat="server"></asp:Literal>
 
 
     <div class="cart-page" id="Cart_Container" runat="server">
@@ -205,7 +205,7 @@
 
       <div class="checkout">
         <%--<button class="checkout-btn">Checkout</button>--%>
-          <asp:Button CssClass="checkout-btn" ID="CheckoutBtn" runat="server" Text="Checkout" />
+          <asp:Button CssClass="checkout-btn" ID="CheckoutBtn" runat="server" Text="Checkout" OnClick="CheckoutButton_Click" />
       </div>
     </div>
    

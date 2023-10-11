@@ -42,6 +42,15 @@ namespace Gym_a_Day_Solution
         protected global::System.Web.UI.WebControls.Button AddToCartBtn;
 
         /// <summary>
+        /// UpdateProdBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button UpdateProdBtn;
+
+        /// <summary>
         /// lt_Added control.
         /// </summary>
         /// <remarks>

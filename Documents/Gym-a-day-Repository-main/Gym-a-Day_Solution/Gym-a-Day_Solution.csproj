@@ -93,12 +93,37 @@
     <Content Include="Images\background2.png" />
     <Content Include="Images\backgroung-img.jpg" />
     <Content Include="Images\hamburger.png" />
+    <Content Include="Images\mise un scene.png" />
+    <Content Include="Images\product-1.jpg" />
+    <Content Include="Images\product-10.jpg" />
+    <Content Include="Images\product-11.jpg" />
+    <Content Include="Images\product-12.jpg" />
+    <Content Include="Images\product-13.jpg" />
+    <Content Include="Images\product-14.jpg" />
+    <Content Include="Images\product-15.jpg" />
+    <Content Include="Images\product-16.jpg" />
+    <Content Include="Images\product-17.jpg" />
+    <Content Include="Images\product-18.jpg" />
+    <Content Include="Images\product-19.jpg" />
+    <Content Include="Images\product-2.jpg" />
+    <Content Include="Images\product-20.jpg" />
+    <Content Include="Images\product-3.jpg" />
+    <Content Include="Images\product-4.jpg" />
+    <Content Include="Images\product-5.jpg" />
+    <Content Include="Images\product-6.jpg" />
+    <Content Include="Images\product-7.jpg" />
+    <Content Include="Images\product-8.jpg" />
+    <Content Include="Images\product-9.jpg" />
+    <Content Include="Images\Product1.jpg" />
+    <Content Include="Images\Product3.jpg" />
     <Content Include="Images\search-interface-symbol.png" />
     <Content Include="Images\shopping-cart.png" />
+    <Content Include="Invoice.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="login.css" />
     <Content Include="main.html" />
     <Content Include="mainstylesheet.css" />
+    <Content Include="ManageProduct.aspx" />
     <Content Include="ProductAddition.aspx" />
     <Content Include="productAdditon.css" />
     <Content Include="ProductDescription.aspx" />
@@ -147,12 +172,25 @@
     <Compile Include="EmptyCart.aspx.designer.cs">
       <DependentUpon>EmptyCart.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Invoice.aspx.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Invoice.aspx.designer.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageProduct.aspx.cs">
+      <DependentUpon>ManageProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageProduct.aspx.designer.cs">
+      <DependentUpon>ManageProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="ProductAddition.aspx.cs">
@@ -216,6 +254,7 @@
   <ItemGroup>
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="obj\Debug\Gym-a-Day_Solution.csproj.AssemblyReference.cache" />
+    <Content Include="Images\product-13.jpg.crdownload" />
     <None Include="Connected Services\ServiceReference1\Gym_a_Day_Backend.wsdl" />
     <None Include="Connected Services\ServiceReference1\Gym_a_Day_Backend.xsd">
       <SubType>Designer</SubType>

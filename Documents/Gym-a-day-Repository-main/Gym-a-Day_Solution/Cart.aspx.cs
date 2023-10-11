@@ -13,7 +13,7 @@ namespace Gym_a_Day_Solution
     public partial class WebForm5 : System.Web.UI.Page
     {
         I_Gym_a_Day_BackendClient Client = new I_Gym_a_Day_BackendClient();
-        public static Cart customerCart;
+        public Cart customerCart;
         
 
 
@@ -191,10 +191,21 @@ namespace Gym_a_Day_Solution
                 }
 
                 //create Invoice
-                Client.CreateInvoice(userId, prodIdQty, totalSpent, datePurchased);
+                bool invoiceCreated = Client.CreateInvoice(userId, prodIdQty, totalSpent, datePurchased);
 
-                //redirect to checkout Page
-                Response.Redirect("Checkout.aspx?cp=1");
+                if (invoiceCreated)
+                {
+                    //empty the cart
+                    customerCart.EmptyCart();
+
+                    //redirect to checkout Page
+                    Response.Redirect("Checkout.aspx?cp=1");
+                }
+                else
+                {
+                    Msg.Text = string.Format("Sorry something went wrong. Please try checkout again");
+                }
+                
             }
             else
             {
@@ -267,6 +278,13 @@ namespace Gym_a_Day_Solution
             }
         }
 
+        public void EmptyCart()
+        {
+            for(int i = 0; i < Items.Count(); i++)
+            {
+                Items.RemoveAt(i);
+            }
+        }
 
 
         //Total price of all items in the cart
