@@ -64,26 +64,26 @@
             text-decoration: none;
         }
 
+        .sortDropdown{
+            background-color: #fca311;
+            color: white;
+            padding: 5px;
+            border: 1px solid #fca311;
+            border-radius: 3px;
+        }
 
 </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="product-catalog">
-        <div class="ProductFilter">
-            <asp:CheckBox ID="Supplements" runat="server" Text="Supplements" OnCheckedChanged="Supplements_CheckedChanged" AutoPostBack="true"/>
-            <br />
-              <asp:CheckBox ID="Clothing" runat="server" Text="Clothing" OnCheckedChanged="Clothing_CheckedChanged" AutoPostBack="true"/>
-            <br />
-                <asp:CheckBox ID="Gadgets" runat="server" Text="Gadgets" OnCheckedChanged="Gadgets_CheckedChanged" AutoPostBack="true"/>
-            <br />
-        </div>
+      
 
 
         <div class="Product-Page_Right">
 
             <div id="Product-Page_Right_Sort">
                 <h1>SORT BY:</h1>
-                <asp:DropDownList ID="SortDropDownList" runat="server" OnSelectedIndexChanged="SortDropDownList_SelectedIndexChanged" AutoPostBack="true">
+                <asp:DropDownList CssClass="sortDropdown" ID="SortDropDownList" runat="server" OnSelectedIndexChanged="SortDropDownList_SelectedIndexChanged" AutoPostBack="true">
 
                     <asp:ListItem Value="PrAsc">Price: Ascending</asp:ListItem>
                     <asp:ListItem Value="PrDsc">Price: Descending</asp:ListItem>

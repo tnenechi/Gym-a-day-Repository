@@ -5,7 +5,6 @@
       <xsd:import schemaLocation="http://localhost:51839/Gym_a_Day_Backend.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:51839/Gym_a_Day_Backend.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:51839/Gym_a_Day_Backend.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
-      <xsd:import schemaLocation="http://localhost:51839/Gym_a_Day_Backend.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="I_Gym_a_Day_Backend_UserRegister_InputMessage">
@@ -31,6 +30,12 @@
   </wsdl:message>
   <wsdl:message name="I_Gym_a_Day_Backend_GetUserFirstname_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetUserFirstnameResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
   </wsdl:message>
   <wsdl:message name="I_Gym_a_Day_Backend_AddProduct_InputMessage">
     <wsdl:part name="parameters" element="tns:AddProduct" />
@@ -92,29 +97,41 @@
   <wsdl:message name="I_Gym_a_Day_Backend_GetProductsByCategory_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetProductsByCategoryResponse" />
   </wsdl:message>
-  <wsdl:message name="I_Gym_a_Day_Backend_GetProductByPriceAsc_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetProductByPriceAsc" />
+  <wsdl:message name="I_Gym_a_Day_Backend_GetUnavailableProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnavailableProducts" />
   </wsdl:message>
-  <wsdl:message name="I_Gym_a_Day_Backend_GetProductByPriceAsc_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetProductByPriceAscResponse" />
+  <wsdl:message name="I_Gym_a_Day_Backend_GetUnavailableProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnavailableProductsResponse" />
   </wsdl:message>
-  <wsdl:message name="I_Gym_a_Day_Backend_GetProductByPriceDsc_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetProductByPriceDsc" />
+  <wsdl:message name="I_Gym_a_Day_Backend_Booking_InputMessage">
+    <wsdl:part name="parameters" element="tns:Booking" />
   </wsdl:message>
-  <wsdl:message name="I_Gym_a_Day_Backend_GetProductByPriceDsc_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetProductByPriceDscResponse" />
+  <wsdl:message name="I_Gym_a_Day_Backend_Booking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BookingResponse" />
   </wsdl:message>
-  <wsdl:message name="I_Gym_a_Day_Backend_GetProductByNameAsc_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetProductByNameAsc" />
+  <wsdl:message name="I_Gym_a_Day_Backend_BookingExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:BookingExists" />
   </wsdl:message>
-  <wsdl:message name="I_Gym_a_Day_Backend_GetProductByNameAsc_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetProductByNameAscResponse" />
+  <wsdl:message name="I_Gym_a_Day_Backend_BookingExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BookingExistsResponse" />
   </wsdl:message>
-  <wsdl:message name="I_Gym_a_Day_Backend_GetProductByNameDsc_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetProductByNameDsc" />
+  <wsdl:message name="I_Gym_a_Day_Backend_GetBooking_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBooking" />
   </wsdl:message>
-  <wsdl:message name="I_Gym_a_Day_Backend_GetProductByNameDsc_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetProductByNameDscResponse" />
+  <wsdl:message name="I_Gym_a_Day_Backend_GetBooking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBookingResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_DeleteBooking_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBooking" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_DeleteBooking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBookingResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_EditBooking_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditBooking" />
+  </wsdl:message>
+  <wsdl:message name="I_Gym_a_Day_Backend_EditBooking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditBookingResponse" />
   </wsdl:message>
   <wsdl:portType name="I_Gym_a_Day_Backend">
     <wsdl:operation name="UserRegister">
@@ -132,6 +149,10 @@
     <wsdl:operation name="GetUserFirstname">
       <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetUserFirstname" message="tns:I_Gym_a_Day_Backend_GetUserFirstname_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetUserFirstnameResponse" message="tns:I_Gym_a_Day_Backend_GetUserFirstname_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetUsers" message="tns:I_Gym_a_Day_Backend_GetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetUsersResponse" message="tns:I_Gym_a_Day_Backend_GetUsers_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="AddProduct">
       <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/AddProduct" message="tns:I_Gym_a_Day_Backend_AddProduct_InputMessage" />
@@ -173,21 +194,29 @@
       <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductsByCategory" message="tns:I_Gym_a_Day_Backend_GetProductsByCategory_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductsByCategoryResponse" message="tns:I_Gym_a_Day_Backend_GetProductsByCategory_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetProductByPriceAsc">
-      <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByPriceAsc" message="tns:I_Gym_a_Day_Backend_GetProductByPriceAsc_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByPriceAscResponse" message="tns:I_Gym_a_Day_Backend_GetProductByPriceAsc_OutputMessage" />
+    <wsdl:operation name="GetUnavailableProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetUnavailableProducts" message="tns:I_Gym_a_Day_Backend_GetUnavailableProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetUnavailableProductsResponse" message="tns:I_Gym_a_Day_Backend_GetUnavailableProducts_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetProductByPriceDsc">
-      <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByPriceDsc" message="tns:I_Gym_a_Day_Backend_GetProductByPriceDsc_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByPriceDscResponse" message="tns:I_Gym_a_Day_Backend_GetProductByPriceDsc_OutputMessage" />
+    <wsdl:operation name="Booking">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/Booking" message="tns:I_Gym_a_Day_Backend_Booking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/BookingResponse" message="tns:I_Gym_a_Day_Backend_Booking_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetProductByNameAsc">
-      <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByNameAsc" message="tns:I_Gym_a_Day_Backend_GetProductByNameAsc_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByNameAscResponse" message="tns:I_Gym_a_Day_Backend_GetProductByNameAsc_OutputMessage" />
+    <wsdl:operation name="BookingExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/BookingExists" message="tns:I_Gym_a_Day_Backend_BookingExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/BookingExistsResponse" message="tns:I_Gym_a_Day_Backend_BookingExists_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetProductByNameDsc">
-      <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByNameDsc" message="tns:I_Gym_a_Day_Backend_GetProductByNameDsc_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByNameDscResponse" message="tns:I_Gym_a_Day_Backend_GetProductByNameDsc_OutputMessage" />
+    <wsdl:operation name="GetBooking">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetBooking" message="tns:I_Gym_a_Day_Backend_GetBooking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/GetBookingResponse" message="tns:I_Gym_a_Day_Backend_GetBooking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBooking">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/DeleteBooking" message="tns:I_Gym_a_Day_Backend_DeleteBooking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/DeleteBookingResponse" message="tns:I_Gym_a_Day_Backend_DeleteBooking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditBooking">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/EditBooking" message="tns:I_Gym_a_Day_Backend_EditBooking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Gym_a_Day_Backend/EditBookingResponse" message="tns:I_Gym_a_Day_Backend_EditBooking_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_I_Gym_a_Day_Backend" type="tns:I_Gym_a_Day_Backend">
@@ -221,6 +250,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetUserFirstname">
       <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/GetUserFirstname" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/GetUsers" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -318,8 +356,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetProductByPriceAsc">
-      <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByPriceAsc" style="document" />
+    <wsdl:operation name="GetUnavailableProducts">
+      <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/GetUnavailableProducts" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -327,8 +365,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetProductByPriceDsc">
-      <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByPriceDsc" style="document" />
+    <wsdl:operation name="Booking">
+      <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/Booking" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -336,8 +374,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetProductByNameAsc">
-      <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByNameAsc" style="document" />
+    <wsdl:operation name="BookingExists">
+      <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/BookingExists" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -345,8 +383,26 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetProductByNameDsc">
-      <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByNameDsc" style="document" />
+    <wsdl:operation name="GetBooking">
+      <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/GetBooking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBooking">
+      <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/DeleteBooking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditBooking">
+      <soap:operation soapAction="http://tempuri.org/I_Gym_a_Day_Backend/EditBooking" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -32,7 +32,7 @@ namespace Gym_a_Day_Solution
 
                 if(Request.QueryString["cout"] != null)
                 {
-                    Response.Redirect("Checkout.aspx?cp=1");
+                    Response.Redirect("Cart.aspx");
                 }
                 else
                 {

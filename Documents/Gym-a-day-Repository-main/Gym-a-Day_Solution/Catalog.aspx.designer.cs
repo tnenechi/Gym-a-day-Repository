@@ -15,33 +15,6 @@ namespace Gym_a_Day_Solution
     {
 
         /// <summary>
-        /// Supplements control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox Supplements;
-
-        /// <summary>
-        /// Clothing control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox Clothing;
-
-        /// <summary>
-        /// Gadgets control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox Gadgets;
-
-        /// <summary>
         /// SortDropDownList control.
         /// </summary>
         /// <remarks>

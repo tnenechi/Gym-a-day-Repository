@@ -73,6 +73,7 @@
   <ItemGroup>
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="BookingsManagement.aspx" />
     <Content Include="Cart.aspx" />
     <Content Include="cart.css" />
     <Content Include="Catalog.aspx" />
@@ -81,7 +82,16 @@
     <None Include="Connected Services\ServiceReference1\Gym_a_Day_Backend.disco" />
     <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
     <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
+    <Content Include="Connected Services\ServiceReference1\Gym_a_Day_Solution.ServiceReference1.Booking.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\Gym_a_Day_Solution.ServiceReference1.Invoice.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\ServiceReference1\Gym_a_Day_Solution.ServiceReference1.Product.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\Gym_a_Day_Solution.ServiceReference1.UserTable.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\ServiceReference1\Reference.svcmap">
@@ -131,6 +141,7 @@
     <Content Include="register.css" />
     <Content Include="Register.aspx" />
     <Content Include="home.css" />
+    <Content Include="Reports.aspx" />
     <Content Include="Web.config" />
     <Content Include="Home.aspx" />
     <Content Include="Bookings.aspx" />
@@ -138,6 +149,12 @@
     <Content Include="Shop.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookingsManagement.aspx.cs">
+      <DependentUpon>BookingsManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BookingsManagement.aspx.designer.cs">
+      <DependentUpon>BookingsManagement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Cart.aspx.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -215,6 +232,13 @@
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -263,9 +287,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServiceReference1\Gym_a_Day_Backend2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceReference1\Gym_a_Day_Backend3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />

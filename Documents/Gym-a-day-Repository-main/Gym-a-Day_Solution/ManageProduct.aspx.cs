@@ -53,7 +53,7 @@ namespace Gym_a_Day_Solution
         protected void EditProductBtn_Click(object sender, EventArgs e)
         {
             int isEdited = client.EditProduct(idOfProduct, productName.Value, productPrice.Value, productDescription.Value, Convert.ToInt32(productQty.Value), SelectCategoryDropDownList.SelectedValue);
-
+            System.Diagnostics.Debug.WriteLine(productName.Value);
             if (isEdited == 1)
             {
 

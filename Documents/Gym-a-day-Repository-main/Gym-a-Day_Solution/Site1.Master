@@ -188,7 +188,7 @@
 
 
 
-    <header id="big_screen_header">
+   <header id="big_screen_header">
       <nav>
         <div class="nav_left">
           <h1>Gym-a-day</h1>
@@ -204,6 +204,8 @@
                   <a href="Bookings.aspx">Bookings</a>
                   <div class="divider"></div>
                   <a href="Catalog.aspx">Shop</a>
+                  <div class="divider"></div>
+                <a href="Invoice.aspx">Invoices</a>
                   <div class="divider"></div>
 
                   <%--Login/Logout Nav--%>
@@ -224,7 +226,7 @@
              <section id="adminNav" class="nav_right_section" runat="server">
                 <a href="Home.aspx">Home</a>
                 <div class="divider"></div>
-                  <a href="#">Show Bookings</a>
+                  <a href="Reports.aspx">Reports</a>
                   <div class="divider"></div>
                   <a href="ProductAddition.aspx">Add Products</a>
                   <div class="divider"></div>
@@ -294,9 +296,9 @@
               <td><a id="contact">My Account</a></td>
               <td id="contact">About Us</td>
               <td id="about-us">
-                <a href="#"  class="fa fa-instagram"></a>
-                <a href="#" class="fa fa-whatsapp"></a>
-                <a href="#" class="fa fa-youtube"></a>
+                <a href="https://instagram.com/gyma.day?igshid=MzMyNGUyNmU2YQ=="  target="_blank" class="fa fa-instagram"></a>
+                <a href="https://www.facebook.com/profile.php?id=61552025619484" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://youtu.be/y54mFrnxRlk" target="_blank" class="fa fa-youtube"></a>
                
               </td>
             </tr>

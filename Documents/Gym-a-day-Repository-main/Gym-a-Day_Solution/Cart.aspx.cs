@@ -123,13 +123,14 @@ namespace Gym_a_Day_Solution
 
 
         //calculates the VAT: 15% of the grandTotal
-        protected decimal getVAT()
+        protected string getVAT()
         {
             decimal total = customerCart.CartTotal();
 
             decimal VAT = (decimal)0.15 * total;
 
-            return VAT;
+            
+            return (VAT.ToString("#.00"));
         }
 
 
@@ -151,15 +152,15 @@ namespace Gym_a_Day_Solution
 
 
         //Returns the CartTotal + VAT + ShippingFee + ...
-        protected decimal getGrandTotal()
+        protected string getGrandTotal()
         {
             decimal cartTotal = customerCart.CartTotal();
-            decimal vat = getVAT();
+            string vat = getVAT();
             decimal shippingFee = (cartTotal >= 500) ? 0 : 150;
 
-            decimal grandTotal = cartTotal + vat + shippingFee;
+            decimal grandTotal = cartTotal + Convert.ToDecimal(vat) + shippingFee;
 
-            return grandTotal;
+            return (grandTotal.ToString("#.00"));
         }
 
 
@@ -170,41 +171,44 @@ namespace Gym_a_Day_Solution
         {
             if(Session["UserType"] != null)
             {
-                Dictionary<int, int> prodIdQty = new Dictionary<int, int>();
+                
                 int userId = (int)Session["UserID"];
                 DateTime datePurchased = DateTime.Now;
-                decimal totalSpent = getGrandTotal();
+                string totalSpent = getGrandTotal();
 
                 foreach (RepeaterItem item in Cart_Repeater.Items)
                 {
-
+                    //Get each product id
                     HiddenField prodID = (HiddenField)item.FindControl("ProdID_HiddenField");
                     int idOfProd = Convert.ToInt32((prodID.Value));
 
+                    //get each product quantity
                     TextBox qtyTextBox = (TextBox)item.FindControl("Cart_Item_Qty");
                     int qtyBought = Convert.ToInt32(qtyTextBox.Text);
 
 
 
-                    prodIdQty.Add(idOfProd, qtyBought);
+                    bool invoiceCreated = Client.CreateInvoice(idOfProd, userId, qtyBought, Convert.ToDecimal(totalSpent), datePurchased);
+
+                    if (!invoiceCreated)
+                    {
+                        Msg.Text = string.Format("Sorry something went wrong. Please try checkout again");
+                        break;
+                    }
 
                 }
 
-                //create Invoice
-                bool invoiceCreated = Client.CreateInvoice(userId, prodIdQty, totalSpent, datePurchased);
 
-                if (invoiceCreated)
-                {
-                    //empty the cart
-                    customerCart.EmptyCart();
+                //At this point, the invoices for all purchased products has been created so: 
 
-                    //redirect to checkout Page
-                    Response.Redirect("Checkout.aspx?cp=1");
-                }
-                else
-                {
-                    Msg.Text = string.Format("Sorry something went wrong. Please try checkout again");
-                }
+                //empty the cart
+                customerCart.EmptyCart();
+
+                //redirect to checkout Page
+                Response.Redirect("Checkout.aspx?cp=1");
+
+
+                
                 
             }
             else

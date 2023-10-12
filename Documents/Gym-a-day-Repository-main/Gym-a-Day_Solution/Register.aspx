@@ -1,7 +1,84 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Gym_a_Day_Solution.Register" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" type="text/css" href="register.css"/>
+    <%--<link rel="stylesheet" type="text/css" href="register.css"/>--%>
+
+
+
+    <style>
+        .register-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+#registerForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-container .input {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 2em;
+    border-radius: var(--login_border_radius);
+}
+
+label {
+    color: #fff;
+}
+
+
+
+
+.register-btn {
+    border-radius: 3px;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+    .register-btn:hover {
+        border: 1px solid #fca311;
+        background-color: #fca311;
+        transition: background-color ease 0.57s;
+    }
+
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 2px solid red;
+}
+
+.links {
+    display: flex;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.divider {
+    height: 30px;
+    border-left: 2px solid;
+}
+
+@media screen and (min-width: 768px) {
+    .login-container input {
+        width: 30%;
+    }
+}
+
+    </style>
 </asp:Content>
 
 

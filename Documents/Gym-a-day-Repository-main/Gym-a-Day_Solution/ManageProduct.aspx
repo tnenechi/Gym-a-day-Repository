@@ -29,18 +29,22 @@
     }
 
 
-    .add-product-btn {
-        padding: 1em 3em;
+    .btn {
+        padding: 1em 5em;
+    
         background-color: black;
         color: white;
         border: none;
         margin-top: 10px;
+        margin-bottom: 15px;
         border-radius: var(--login_border_radius);
         border-radius: 3px;
+        font-size: 15px;
     }
 
-    .add-product-btn:hover {
+    .btn:hover{
         background-color: #fca311;
+        transition: background-color ease 0.59s;
     }
 
     </style>
@@ -103,8 +107,8 @@
             </asp:DropDownList>
 
 
-            <asp:Button CssClass="Edit-product-btn" ID="EditProductBtn" runat="server" Text="Edit Product" OnClick="EditProductBtn_Click"/>
-            <asp:Button CssClass="Delete-product-btn" ID="DeleteProductBtn" runat="server" Text="Delete Product" OnClick="DeleteProductBtn_Click"/>
+            <asp:Button CssClass="btn" ID="EditProductBtn" runat="server" Text="Edit Product" OnClick="EditProductBtn_Click"/>
+            <asp:Button CssClass="btn" ID="DeleteProductBtn" runat="server" Text="Delete Product" OnClick="DeleteProductBtn_Click"/>
            
         </div>
 

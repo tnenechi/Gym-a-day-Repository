@@ -15,6 +15,320 @@ namespace Gym_a_Day_Solution.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="UserTable", Namespace="http://schemas.datacontract.org/2004/07/")]
+    [System.SerializableAttribute()]
+    public partial class UserTable : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GenderField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Gym_a_Day_Solution.ServiceReference1.Invoice[] InvoicesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PhoneField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string U_NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string U_SurnameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Email {
+            get {
+                return this.EmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
+                    this.EmailField = value;
+                    this.RaisePropertyChanged("Email");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Gender {
+            get {
+                return this.GenderField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GenderField, value) != true)) {
+                    this.GenderField = value;
+                    this.RaisePropertyChanged("Gender");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID {
+            get {
+                return this.IDField;
+            }
+            set {
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Gym_a_Day_Solution.ServiceReference1.Invoice[] Invoices {
+            get {
+                return this.InvoicesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InvoicesField, value) != true)) {
+                    this.InvoicesField = value;
+                    this.RaisePropertyChanged("Invoices");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Phone {
+            get {
+                return this.PhoneField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PhoneField, value) != true)) {
+                    this.PhoneField = value;
+                    this.RaisePropertyChanged("Phone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Type {
+            get {
+                return this.TypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TypeField, value) != true)) {
+                    this.TypeField = value;
+                    this.RaisePropertyChanged("Type");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string U_Name {
+            get {
+                return this.U_NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.U_NameField, value) != true)) {
+                    this.U_NameField = value;
+                    this.RaisePropertyChanged("U_Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string U_Surname {
+            get {
+                return this.U_SurnameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.U_SurnameField, value) != true)) {
+                    this.U_SurnameField = value;
+                    this.RaisePropertyChanged("U_Surname");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Invoice", Namespace="http://schemas.datacontract.org/2004/07/")]
+    [System.SerializableAttribute()]
+    public partial class Invoice : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ProdIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ProdQtyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Gym_a_Day_Solution.ServiceReference1.Product ProductField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime PurchaseDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal TotalPriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int UserIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Gym_a_Day_Solution.ServiceReference1.UserTable UserTableField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ProdID {
+            get {
+                return this.ProdIDField;
+            }
+            set {
+                if ((this.ProdIDField.Equals(value) != true)) {
+                    this.ProdIDField = value;
+                    this.RaisePropertyChanged("ProdID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ProdQty {
+            get {
+                return this.ProdQtyField;
+            }
+            set {
+                if ((this.ProdQtyField.Equals(value) != true)) {
+                    this.ProdQtyField = value;
+                    this.RaisePropertyChanged("ProdQty");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Gym_a_Day_Solution.ServiceReference1.Product Product {
+            get {
+                return this.ProductField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductField, value) != true)) {
+                    this.ProductField = value;
+                    this.RaisePropertyChanged("Product");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime PurchaseDate {
+            get {
+                return this.PurchaseDateField;
+            }
+            set {
+                if ((this.PurchaseDateField.Equals(value) != true)) {
+                    this.PurchaseDateField = value;
+                    this.RaisePropertyChanged("PurchaseDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal TotalPrice {
+            get {
+                return this.TotalPriceField;
+            }
+            set {
+                if ((this.TotalPriceField.Equals(value) != true)) {
+                    this.TotalPriceField = value;
+                    this.RaisePropertyChanged("TotalPrice");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int UserID {
+            get {
+                return this.UserIDField;
+            }
+            set {
+                if ((this.UserIDField.Equals(value) != true)) {
+                    this.UserIDField = value;
+                    this.RaisePropertyChanged("UserID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Gym_a_Day_Solution.ServiceReference1.UserTable UserTable {
+            get {
+                return this.UserTableField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserTableField, value) != true)) {
+                    this.UserTableField = value;
+                    this.RaisePropertyChanged("UserTable");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Product", Namespace="http://schemas.datacontract.org/2004/07/")]
     [System.SerializableAttribute()]
     public partial class Product : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -24,6 +338,9 @@ namespace Gym_a_Day_Solution.ServiceReference1 {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int ActiveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Gym_a_Day_Solution.ServiceReference1.Invoice[] InvoicesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string Prod_CategoryField;
@@ -65,6 +382,19 @@ namespace Gym_a_Day_Solution.ServiceReference1 {
                 if ((this.ActiveField.Equals(value) != true)) {
                     this.ActiveField = value;
                     this.RaisePropertyChanged("Active");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Gym_a_Day_Solution.ServiceReference1.Invoice[] Invoices {
+            get {
+                return this.InvoicesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InvoicesField, value) != true)) {
+                    this.InvoicesField = value;
+                    this.RaisePropertyChanged("Invoices");
                 }
             }
         }
@@ -170,6 +500,195 @@ namespace Gym_a_Day_Solution.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Booking", Namespace="http://schemas.datacontract.org/2004/07/")]
+    [System.SerializableAttribute()]
+    public partial class Booking : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ActiveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BranchField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PhoneField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SessionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string U_NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string U_SurnameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Active {
+            get {
+                return this.ActiveField;
+            }
+            set {
+                if ((this.ActiveField.Equals(value) != true)) {
+                    this.ActiveField = value;
+                    this.RaisePropertyChanged("Active");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Branch {
+            get {
+                return this.BranchField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BranchField, value) != true)) {
+                    this.BranchField = value;
+                    this.RaisePropertyChanged("Branch");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Date {
+            get {
+                return this.DateField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DateField, value) != true)) {
+                    this.DateField = value;
+                    this.RaisePropertyChanged("Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Email {
+            get {
+                return this.EmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
+                    this.EmailField = value;
+                    this.RaisePropertyChanged("Email");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Phone {
+            get {
+                return this.PhoneField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PhoneField, value) != true)) {
+                    this.PhoneField = value;
+                    this.RaisePropertyChanged("Phone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Session {
+            get {
+                return this.SessionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SessionField, value) != true)) {
+                    this.SessionField = value;
+                    this.RaisePropertyChanged("Session");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Time {
+            get {
+                return this.TimeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TimeField, value) != true)) {
+                    this.TimeField = value;
+                    this.RaisePropertyChanged("Time");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string U_Name {
+            get {
+                return this.U_NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.U_NameField, value) != true)) {
+                    this.U_NameField = value;
+                    this.RaisePropertyChanged("U_Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string U_Surname {
+            get {
+                return this.U_SurnameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.U_SurnameField, value) != true)) {
+                    this.U_SurnameField = value;
+                    this.RaisePropertyChanged("U_Surname");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.I_Gym_a_Day_Backend")]
     public interface I_Gym_a_Day_Backend {
@@ -197,6 +716,12 @@ namespace Gym_a_Day_Solution.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetUserFirstname", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetUserFirstnameResponse")]
         System.Threading.Tasks.Task<string> GetUserFirstnameAsync(int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetUsers", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetUsersResponse")]
+        Gym_a_Day_Solution.ServiceReference1.UserTable[] GetUsers();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetUsers", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetUsersResponse")]
+        System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.UserTable[]> GetUsersAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/AddProduct", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/AddProductResponse")]
         bool AddProduct(string imgPath, string prodName, string prodPrice, string prodDescription, int quantity, string category);
@@ -241,20 +766,16 @@ namespace Gym_a_Day_Solution.ServiceReference1 {
         System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Product> GetAProductAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/CreateInvoice", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/CreateInvoiceResponse")]
-        bool CreateInvoice(int userId, System.Collections.Generic.Dictionary<int, int> prodIdQty, decimal totalAmountSpent, System.DateTime purchaseDate);
+        bool CreateInvoice(int prodId, int userId, int prodQty, decimal totalAmountSpent, System.DateTime purchaseDate);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/CreateInvoice", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/CreateInvoiceResponse")]
-        System.Threading.Tasks.Task<bool> CreateInvoiceAsync(int userId, System.Collections.Generic.Dictionary<int, int> prodIdQty, decimal totalAmountSpent, System.DateTime purchaseDate);
+        System.Threading.Tasks.Task<bool> CreateInvoiceAsync(int prodId, int userId, int prodQty, decimal totalAmountSpent, System.DateTime purchaseDate);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetInvoices", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetInvoicesResponse")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Gym_a_Day_Solution.ServiceReference1.Product[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Gym_a_Day_Solution.ServiceReference1.Product))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.Dictionary<int, int>))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
-        object[] GetInvoices(int userId);
+        Gym_a_Day_Solution.ServiceReference1.Invoice[] GetInvoices(int userId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetInvoices", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetInvoicesResponse")]
-        System.Threading.Tasks.Task<object[]> GetInvoicesAsync(int userId);
+        System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Invoice[]> GetInvoicesAsync(int userId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductsByCategory", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProductsByCategoryResponse")]
         Gym_a_Day_Solution.ServiceReference1.Product[] GetProductsByCategory(string productCategory);
@@ -262,29 +783,41 @@ namespace Gym_a_Day_Solution.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductsByCategory", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProductsByCategoryResponse")]
         System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Product[]> GetProductsByCategoryAsync(string productCategory);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByPriceAsc", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByPriceAscResponse")]
-        Gym_a_Day_Solution.ServiceReference1.Product[] GetProductByPriceAsc();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetUnavailableProducts", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetUnavailableProductsResponse")]
+        Gym_a_Day_Solution.ServiceReference1.Product[] GetUnavailableProducts();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByPriceAsc", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByPriceAscResponse")]
-        System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Product[]> GetProductByPriceAscAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetUnavailableProducts", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetUnavailableProductsResponse")]
+        System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Product[]> GetUnavailableProductsAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByPriceDsc", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByPriceDscResponse")]
-        Gym_a_Day_Solution.ServiceReference1.Product[] GetProductByPriceDsc();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/Booking", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/BookingResponse")]
+        int Booking(string userName, string userSurname, string userEmail, string userPhoneNo, string branch, string date, string time, string sess);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByPriceDsc", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByPriceDscResponse")]
-        System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Product[]> GetProductByPriceDscAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/Booking", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/BookingResponse")]
+        System.Threading.Tasks.Task<int> BookingAsync(string userName, string userSurname, string userEmail, string userPhoneNo, string branch, string date, string time, string sess);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByNameAsc", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByNameAscResponse")]
-        Gym_a_Day_Solution.ServiceReference1.Product[] GetProductByNameAsc();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/BookingExists", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/BookingExistsResponse")]
+        bool BookingExists(string userEmail);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByNameAsc", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByNameAscResponse")]
-        System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Product[]> GetProductByNameAscAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/BookingExists", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/BookingExistsResponse")]
+        System.Threading.Tasks.Task<bool> BookingExistsAsync(string userEmail);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByNameDsc", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByNameDscResponse")]
-        Gym_a_Day_Solution.ServiceReference1.Product[] GetProductByNameDsc();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetBooking", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetBookingResponse")]
+        Gym_a_Day_Solution.ServiceReference1.Booking GetBooking(string email);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByNameDsc", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetProductByNameDscResponse")]
-        System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Product[]> GetProductByNameDscAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/GetBooking", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/GetBookingResponse")]
+        System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Booking> GetBookingAsync(string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/DeleteBooking", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/DeleteBookingResponse")]
+        bool DeleteBooking(string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/DeleteBooking", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/DeleteBookingResponse")]
+        System.Threading.Tasks.Task<bool> DeleteBookingAsync(string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/EditBooking", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/EditBookingResponse")]
+        bool EditBooking(string userName, string userSurname, string userEmail, string userPhoneNo, string branch, string date, string time, string sess);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/I_Gym_a_Day_Backend/EditBooking", ReplyAction="http://tempuri.org/I_Gym_a_Day_Backend/EditBookingResponse")]
+        System.Threading.Tasks.Task<bool> EditBookingAsync(string userName, string userSurname, string userEmail, string userPhoneNo, string branch, string date, string time, string sess);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -346,6 +879,14 @@ namespace Gym_a_Day_Solution.ServiceReference1 {
             return base.Channel.GetUserFirstnameAsync(ID);
         }
         
+        public Gym_a_Day_Solution.ServiceReference1.UserTable[] GetUsers() {
+            return base.Channel.GetUsers();
+        }
+        
+        public System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.UserTable[]> GetUsersAsync() {
+            return base.Channel.GetUsersAsync();
+        }
+        
         public bool AddProduct(string imgPath, string prodName, string prodPrice, string prodDescription, int quantity, string category) {
             return base.Channel.AddProduct(imgPath, prodName, prodPrice, prodDescription, quantity, category);
         }
@@ -402,19 +943,19 @@ namespace Gym_a_Day_Solution.ServiceReference1 {
             return base.Channel.GetAProductAsync(id);
         }
         
-        public bool CreateInvoice(int userId, System.Collections.Generic.Dictionary<int, int> prodIdQty, decimal totalAmountSpent, System.DateTime purchaseDate) {
-            return base.Channel.CreateInvoice(userId, prodIdQty, totalAmountSpent, purchaseDate);
+        public bool CreateInvoice(int prodId, int userId, int prodQty, decimal totalAmountSpent, System.DateTime purchaseDate) {
+            return base.Channel.CreateInvoice(prodId, userId, prodQty, totalAmountSpent, purchaseDate);
         }
         
-        public System.Threading.Tasks.Task<bool> CreateInvoiceAsync(int userId, System.Collections.Generic.Dictionary<int, int> prodIdQty, decimal totalAmountSpent, System.DateTime purchaseDate) {
-            return base.Channel.CreateInvoiceAsync(userId, prodIdQty, totalAmountSpent, purchaseDate);
+        public System.Threading.Tasks.Task<bool> CreateInvoiceAsync(int prodId, int userId, int prodQty, decimal totalAmountSpent, System.DateTime purchaseDate) {
+            return base.Channel.CreateInvoiceAsync(prodId, userId, prodQty, totalAmountSpent, purchaseDate);
         }
         
-        public object[] GetInvoices(int userId) {
+        public Gym_a_Day_Solution.ServiceReference1.Invoice[] GetInvoices(int userId) {
             return base.Channel.GetInvoices(userId);
         }
         
-        public System.Threading.Tasks.Task<object[]> GetInvoicesAsync(int userId) {
+        public System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Invoice[]> GetInvoicesAsync(int userId) {
             return base.Channel.GetInvoicesAsync(userId);
         }
         
@@ -426,36 +967,52 @@ namespace Gym_a_Day_Solution.ServiceReference1 {
             return base.Channel.GetProductsByCategoryAsync(productCategory);
         }
         
-        public Gym_a_Day_Solution.ServiceReference1.Product[] GetProductByPriceAsc() {
-            return base.Channel.GetProductByPriceAsc();
+        public Gym_a_Day_Solution.ServiceReference1.Product[] GetUnavailableProducts() {
+            return base.Channel.GetUnavailableProducts();
         }
         
-        public System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Product[]> GetProductByPriceAscAsync() {
-            return base.Channel.GetProductByPriceAscAsync();
+        public System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Product[]> GetUnavailableProductsAsync() {
+            return base.Channel.GetUnavailableProductsAsync();
         }
         
-        public Gym_a_Day_Solution.ServiceReference1.Product[] GetProductByPriceDsc() {
-            return base.Channel.GetProductByPriceDsc();
+        public int Booking(string userName, string userSurname, string userEmail, string userPhoneNo, string branch, string date, string time, string sess) {
+            return base.Channel.Booking(userName, userSurname, userEmail, userPhoneNo, branch, date, time, sess);
         }
         
-        public System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Product[]> GetProductByPriceDscAsync() {
-            return base.Channel.GetProductByPriceDscAsync();
+        public System.Threading.Tasks.Task<int> BookingAsync(string userName, string userSurname, string userEmail, string userPhoneNo, string branch, string date, string time, string sess) {
+            return base.Channel.BookingAsync(userName, userSurname, userEmail, userPhoneNo, branch, date, time, sess);
         }
         
-        public Gym_a_Day_Solution.ServiceReference1.Product[] GetProductByNameAsc() {
-            return base.Channel.GetProductByNameAsc();
+        public bool BookingExists(string userEmail) {
+            return base.Channel.BookingExists(userEmail);
         }
         
-        public System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Product[]> GetProductByNameAscAsync() {
-            return base.Channel.GetProductByNameAscAsync();
+        public System.Threading.Tasks.Task<bool> BookingExistsAsync(string userEmail) {
+            return base.Channel.BookingExistsAsync(userEmail);
         }
         
-        public Gym_a_Day_Solution.ServiceReference1.Product[] GetProductByNameDsc() {
-            return base.Channel.GetProductByNameDsc();
+        public Gym_a_Day_Solution.ServiceReference1.Booking GetBooking(string email) {
+            return base.Channel.GetBooking(email);
         }
         
-        public System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Product[]> GetProductByNameDscAsync() {
-            return base.Channel.GetProductByNameDscAsync();
+        public System.Threading.Tasks.Task<Gym_a_Day_Solution.ServiceReference1.Booking> GetBookingAsync(string email) {
+            return base.Channel.GetBookingAsync(email);
+        }
+        
+        public bool DeleteBooking(string email) {
+            return base.Channel.DeleteBooking(email);
+        }
+        
+        public System.Threading.Tasks.Task<bool> DeleteBookingAsync(string email) {
+            return base.Channel.DeleteBookingAsync(email);
+        }
+        
+        public bool EditBooking(string userName, string userSurname, string userEmail, string userPhoneNo, string branch, string date, string time, string sess) {
+            return base.Channel.EditBooking(userName, userSurname, userEmail, userPhoneNo, branch, date, time, sess);
+        }
+        
+        public System.Threading.Tasks.Task<bool> EditBookingAsync(string userName, string userSurname, string userEmail, string userPhoneNo, string branch, string date, string time, string sess) {
+            return base.Channel.EditBookingAsync(userName, userSurname, userEmail, userPhoneNo, branch, date, time, sess);
         }
     }
 }

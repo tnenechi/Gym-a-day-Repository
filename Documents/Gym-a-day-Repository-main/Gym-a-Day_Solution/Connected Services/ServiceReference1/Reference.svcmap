@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="12d85bc0-bae1-4360-9291-bac72674656c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="11d9624f-5fbc-42bb-9e74-ed28d2c3013f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,12 +22,11 @@
     <MetadataSource Address="http://localhost:51839/Gym_a_Day_Backend.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Gym_a_Day_Backend.xsd" MetadataType="Schema" ID="2ad39f78-13a8-454d-b840-62c32ff4f67d" SourceId="1" SourceUrl="http://localhost:51839/Gym_a_Day_Backend.svc?xsd=xsd2" />
-    <MetadataFile FileName="Gym_a_Day_Backend1.xsd" MetadataType="Schema" ID="064b207f-9f1c-45c4-a2ad-2c278cea4894" SourceId="1" SourceUrl="http://localhost:51839/Gym_a_Day_Backend.svc?xsd=xsd1" />
-    <MetadataFile FileName="Gym_a_Day_Backend.wsdl" MetadataType="Wsdl" ID="dae10754-549e-4a8c-912c-b661c2daa15d" SourceId="1" SourceUrl="http://localhost:51839/Gym_a_Day_Backend.svc?wsdl" />
-    <MetadataFile FileName="Gym_a_Day_Backend2.xsd" MetadataType="Schema" ID="ae7127fb-4739-46d5-a129-02c3f0595e93" SourceId="1" SourceUrl="http://localhost:51839/Gym_a_Day_Backend.svc?xsd=xsd3" />
-    <MetadataFile FileName="Gym_a_Day_Backend3.xsd" MetadataType="Schema" ID="c584317d-e77f-4b5c-b4f1-4d380fad9015" SourceId="1" SourceUrl="http://localhost:51839/Gym_a_Day_Backend.svc?xsd=xsd0" />
-    <MetadataFile FileName="Gym_a_Day_Backend.disco" MetadataType="Disco" ID="6a66e50d-1548-4fe0-8a1a-cdd18922abf1" SourceId="1" SourceUrl="http://localhost:51839/Gym_a_Day_Backend.svc?disco" />
+    <MetadataFile FileName="Gym_a_Day_Backend.xsd" MetadataType="Schema" ID="d8e1dc43-a2ae-40af-ae06-b58c3c1993da" SourceId="1" SourceUrl="http://localhost:51839/Gym_a_Day_Backend.svc?xsd=xsd2" />
+    <MetadataFile FileName="Gym_a_Day_Backend.disco" MetadataType="Disco" ID="6434af11-2e63-44fc-bb6b-4e3cad67494a" SourceId="1" SourceUrl="http://localhost:51839/Gym_a_Day_Backend.svc?disco" />
+    <MetadataFile FileName="Gym_a_Day_Backend1.xsd" MetadataType="Schema" ID="1c521a3e-5ee1-433e-8ac4-0c7bdcfdb9d2" SourceId="1" SourceUrl="http://localhost:51839/Gym_a_Day_Backend.svc?xsd=xsd1" />
+    <MetadataFile FileName="Gym_a_Day_Backend2.xsd" MetadataType="Schema" ID="d25ed837-af93-40fe-8e4c-4ba3ee584ea8" SourceId="1" SourceUrl="http://localhost:51839/Gym_a_Day_Backend.svc?xsd=xsd0" />
+    <MetadataFile FileName="Gym_a_Day_Backend.wsdl" MetadataType="Wsdl" ID="2926c428-9970-4787-9584-87d261d53d78" SourceId="1" SourceUrl="http://localhost:51839/Gym_a_Day_Backend.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
